@@ -1,0 +1,5 @@
+# ignore all directories with the name test
+__pycache__/
+
+# ignore below files from git
+*-checkpoint*
