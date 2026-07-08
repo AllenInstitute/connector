@@ -23,17 +23,20 @@ dependencies = [
     "scikit-learn>=1.3",
     "matplotlib>=3.7",
     "seaborn>=0.12",
+    "tqdm>=4.65",
     "flow_matching>=1.0",
     "geomloss>=0.2.6",
+    "ipykernel>=6.0",   # run notebooks from VS Code or a separate JupyterLab
 ]
 
-[project.optional-dependencies]
-# Install with:  pip install -e ".[notebooks]"
-# ipykernel registers the env as a Jupyter kernel; open notebooks from VS Code
-# or a separate JupyterLab. Use "jupyterlab" instead for a self-contained env.
-# After install, register the kernel once:
+# ipykernel is a core dependency above, so after `pip install -e .` register
+# the kernel once:
 #   python -m ipykernel install --user --name connector --display-name "Python (connector)"
-notebooks = ["ipykernel"]
+# The optional extra below adds a self-contained JupyterLab (a `jupyter lab`
+# command in this env), for when you're not opening notebooks from VS Code or
+# a separately-installed Jupyter. Install with:  pip install -e ".[jupyter]"
+[project.optional-dependencies]
+jupyter = ["jupyterlab"]
 
 # The repository is a flat collection of top-level modules rather than a
 # package, so declare the importable ones explicitly. This is what makes
