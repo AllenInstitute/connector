@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "connector"
+version = "0.1.0"
+description = "Identifying Connectivity Distributions from Neural Dynamics Using Flows"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Timothy Doyeon Kim" },
+    { name = "Ulises Pereira-Obilinovic" },
+    { name = "Yiliu Wang" },
+    { name = "Eric Shea-Brown" },
+    { name = "Uygar Sümbül" },
+]
+dependencies = [
+    "torch>=2.6",          # required: the code uses torch.accelerator
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "scikit-learn>=1.3",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "flow_matching>=1.0",
+    "geomloss>=0.2.6",
+]
+
+[project.optional-dependencies]
+# Install with:  pip install -e ".[notebooks]"
+# ipykernel registers the env as a Jupyter kernel; open notebooks from VS Code
+# or a separate JupyterLab. Use "jupyterlab" instead for a self-contained env.
+# After install, register the kernel once:
+#   python -m ipykernel install --user --name connector --display-name "Python (connector)"
+notebooks = ["ipykernel"]
+
+# The repository is a flat collection of top-level modules rather than a
+# package, so declare the importable ones explicitly. This is what makes
+# `import train` / `import utilities` resolve after `pip install -e .`.
+[tool.setuptools]
+py-modules = ["train", "utilities"]
+
+# GPU note: `pip install -e .` pulls the default (usually CPU-only) torch
+# wheel. For a CUDA build, install torch first from
+# https://pytorch.org/get-started/locally/, then run `pip install -e .`.
