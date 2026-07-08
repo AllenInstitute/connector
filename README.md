@@ -5,7 +5,7 @@ The brain uses a set of rules—which we call "dynamics"—to perform computatio
 
 Inferring connectivity from dynamics alone is fundamentally challenging because many different connectivities can generate identical dynamics. To address this, we identified the mathematical source of this degeneracy, and developed a framework that infers, among the set of possible connectivities, the simplest one that is consistent with the data. This helps us tell apart which component of the inferred connectivity is necessary for the observed dynamics, and which is just guesswork. This allows us to focus on the component of the connectivity that matters, and generate sharper, experimentally testable hypotheses about how the brain works. 
 
-# Installation
+## Installation
 Run the commands below to install Connector:
 
 ```
@@ -19,10 +19,13 @@ $ pip install -e .
 
 Note: GPU users should FIRST install the CUDA build that matches their system by following https://pytorch.org/get-started/locally/, before running `pip install -e .` above.
 
-# Notebooks
+## Notebooks
 The ipynb notebooks contain analyses performed in the paper.
 
-# Citation
+## Level of Support
+This repository is released as Supplementary Material to Kim et al., ICML, 2026. We are planning on occasionally updating this tool with no fixed schedule. Community involvement is encouraged through both issues and pull requests.
+
+## Citation
 
 Kim, T.D., Pereira-Obilinovic, U., Wang, Y., Shea-Brown, E., Sümbül, U. (2026). Identifying Connectivity Distributions from Neural Dynamics Using Flows. *Proceedings of the 43rd International Conference on Machine Learning (ICML)*.
 
@@ -34,6 +37,3 @@ Kim, T.D., Pereira-Obilinovic, U., Wang, Y., Shea-Brown, E., Sümbül, U. (2026)
     journal={Proceedings of the 43rd International Conference on Machine Learning (ICML)}
 }
 ```
-
-## Level of Support
-This repository is released as Supplementary Material to Kim et al., ICML, 2026. We are planning on occasionally updating this tool with no fixed schedule. Community involvement is encouraged through both issues and pull requests.
