@@ -27,7 +27,7 @@ This repository is released as Supplementary Material to Kim et al., ICML, 2026.
 
 ## Citation
 
-Kim, T.D., Pereira-Obilinovic, U., Wang, Y., Shea-Brown, E., Sümbül, U. (2026). Identifying Connectivity Distributions from Neural Dynamics Using Flows. *Proceedings of the 43rd International Conference on Machine Learning (ICML)*.
+Kim, T.D., Pereira-Obilinovic, U., Wang, Y., Shea-Brown, E., Sümbül, U. (2026). Identifying Connectivity Distributions from Neural Dynamics Using Flows. [*Proceedings of the 43rd International Conference on Machine Learning (ICML)*](https://openreview.net/forum?id=AuiUlu3OmT).
 
 ```bibtex
 @article{kim2026connector,
